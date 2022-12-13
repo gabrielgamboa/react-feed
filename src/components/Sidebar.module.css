@@ -1,0 +1,11 @@
+.sidebar {
+    background: var(--gray-800);
+    border-radius: 8px;
+    overflow: hidden; /*faz conteúdo do elemento não escapar do container */
+}
+
+.cover {
+    width: 100%;
+    height: 72px;
+    object-fit: cover; /*mostra centro da imagem sem cortá-la e distorcê-la*/
+}
