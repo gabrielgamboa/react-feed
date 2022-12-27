@@ -4,7 +4,7 @@
     gap: 1rem;
 }
 
-.comment > img {
+.comment>img {
     width: 3rem;
     height: 3rem;
     border-radius: 8px;
@@ -24,5 +24,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
+
+.authorAndTime strong {
+    display: block;
+    font-size: 0.875rem;
+}
+
+.authorAndTime time {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--gray-400);
+}
+
+.commentContent header button {}
