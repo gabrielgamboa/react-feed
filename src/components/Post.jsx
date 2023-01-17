@@ -29,6 +29,7 @@ export function Post({ author, content, publishedAt }) {
     }
 
     function handleNewCommentText() {
+        event.target.setCustomValidity('');
         setNewCommentText(event.target.value);
     }
 
@@ -38,6 +39,10 @@ export function Post({ author, content, publishedAt }) {
         });
 
         setComments(commentsWithoutDeletedOne);
+    }
+
+    function handleNewCommentWithError() {
+        event.target.setCustomValidity('Este campo é obrigatório!');
     }
 
     return (
@@ -70,7 +75,9 @@ export function Post({ author, content, publishedAt }) {
                 <textarea
                     placeholder="Deixe um comentário"
                     value={newCommentText}
+                    onInvalid={handleNewCommentWithError}
                     onChange={handleNewCommentText}
+                    required
                 />
 
                 <footer>
